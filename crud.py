@@ -73,7 +73,9 @@ def logout():
     st.session_state.user_role = None
     st.session_state.user_company = None
     st.info("Logged out successfully.")
-    st.experimental_rerun()
+    # Change this line:
+    st.rerun() # This is the fix!
+
 
 # --- Helper Functions for Data Manipulation ---
 
