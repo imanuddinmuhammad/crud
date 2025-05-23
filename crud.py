@@ -62,7 +62,8 @@ def authenticate(email, password):
         st.session_state.user_role = HARDCODED_USERS[email]['role']
         st.session_state.user_company = HARDCODED_USERS[email]['company']
         st.success(f"Welcome, {st.session_state.user_role} from {st.session_state.user_company}!")
-        st.experimental_rerun() # Rerun to show the main app
+        # CHANGE THIS LINE:
+        st.rerun() # Rerun to show the main app
     else:
         st.error("Invalid email or password.")
 
@@ -568,7 +569,7 @@ st.sidebar.info("This is an in-memory CRUD app. Data will reset on page refresh 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Test Accounts:")
 st.sidebar.markdown("""
-- **Super Admin:** `iman@mail.com` / `superpassword`
+- **Super Admin:** `superadmin@mail.com` / `superpassword`
 - **Company A Admin:** `admin1@companyA.com` / `adminpasswordA`
 - **Company A User:** `user1@companyA.com` / `userpasswordA`
 - **Company B Admin:** `admin2@companyB.com` / `adminpasswordB`
