@@ -65,7 +65,7 @@ def authenticate(email, password):
         # CHANGE THIS LINE:
         st.rerun() # Rerun to show the main app
     else:
-        st.error("Invalid email or password.")
+        st.error("Invalid email or passwordd.")
 
 def logout():
     st.session_state.logged_in = False
